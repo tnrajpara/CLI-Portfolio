@@ -15,6 +15,14 @@ type Props = {
 };
 
 const Terminal = (props: PropsWithChildren<Props>) => {
+  const currentTime = new Date().getTime();
+  const expiryTime = localStorage.getItem("expiryTime");
+
+  if (expiryTime && currentTime - Number(expiryTime) > 2 * 60 * 60 * 1000) {
+    localStorage.removeItem("hasShownSummary");
+    localStorage.removeItem("expiryTime");
+  }
+
   const hasShownSummary = localStorage.getItem("hasShownSummary");
 
   const [commandList, setCommandList] = useState<CommandOutput[]>(
@@ -35,6 +43,7 @@ const Terminal = (props: PropsWithChildren<Props>) => {
   useEffect(() => {
     if (!hasShownSummary) {
       localStorage.setItem("hasShownSummary", "true");
+      localStorage.setItem("expiryTime", String(new Date().getTime()));
     }
   });
 
