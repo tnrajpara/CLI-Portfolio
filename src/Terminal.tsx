@@ -110,6 +110,23 @@ const Terminal = (props: PropsWithChildren<Props>) => {
               </div>
              `;
             break;
+          case "ls":
+              output = `
+              <p style="font-weight:bold;">Available commands -</p>
+              <div style="display:grid;grid-template-columns: repeat(3, 1fr);">
+              <p>contact</p>
+              <p>linkedin</p>
+              <p>github</p>
+              <p>google</p>
+              <p>youtube</p>  
+              <p>weather</p>
+              <p>summary</p>
+              <p>date</p>
+              <p>summary</p>
+              <p>sudo</p>
+              </div>
+             `;
+            break; 
           case "contact":
             output = `
               Email: rajparatarang66@gmail.com 
