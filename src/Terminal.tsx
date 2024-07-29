@@ -129,6 +129,10 @@ const Terminal = (props: PropsWithChildren<Props>) => {
             window.open("https://www.github.com/tnrajpara");
             output = "Opening... Github";
             break;
+          case "resume":
+            window.open("https://docs.google.com/document/d/120c4uVub6pvjfGW_SmVvsrc2-xPmNcS2BAE_GiEN3A8");
+            output = "Opening... Resume";
+            break;
           case "gh":
             window.open("https://www.github.com/tnrajpara");
             output = "Opening... Github";
