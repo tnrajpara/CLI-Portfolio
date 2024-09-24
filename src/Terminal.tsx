@@ -31,7 +31,7 @@ const Terminal = (props: PropsWithChildren<Props>) => {
       : [
           {
             command: "summary",
-            output: `<pre>${myText}</pre> <p>Welcome! to my site</p>
+            output: `<pre>${myText}</pre> <p>Welcome! to this site</p>
             <p>Type 'help' to see the list of available commands.</p>
             <p>Type 'repo' for github repository.</p>`,
           },
