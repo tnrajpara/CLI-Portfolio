@@ -18,7 +18,7 @@ const Terminal = (props: PropsWithChildren<Props>) => {
   const currentTime = new Date().getTime();
   const expiryTime = localStorage.getItem("expiryTime");
 
-  if (expiryTime && currentTime - Number(expiryTime) > 2 * 60 * 60 * 1000) {
+  if (expiryTime && currentTime - Number(expiryTime) > 2 * 60 * 80 * 1000) {
     localStorage.removeItem("hasShownSummary");
     localStorage.removeItem("expiryTime");
   }
@@ -111,7 +111,7 @@ const Terminal = (props: PropsWithChildren<Props>) => {
              `;
             break;
           case "ls":
-              output = `
+            output = `
               <p style="font-weight:bold;">Available commands -</p>
               <div style="display:grid;grid-template-columns: repeat(3, 1fr);">
               <p>contact</p>
@@ -126,7 +126,7 @@ const Terminal = (props: PropsWithChildren<Props>) => {
               <p>sudo</p>
               </div>
              `;
-            break; 
+            break;
           case "contact":
             output = `
               Email: rajparatarang66@gmail.com 
@@ -147,7 +147,9 @@ const Terminal = (props: PropsWithChildren<Props>) => {
             output = "Opening... Github";
             break;
           case "resume":
-            window.open("https://docs.google.com/document/d/120c4uVub6pvjfGW_SmVvsrc2-xPmNcS2BAE_GiEN3A8");
+            window.open(
+              "https://docs.google.com/document/d/120c4uVub6pvjfGW_SmVvsrc2-xPmNcS2BAE_GiEN3A8"
+            );
             output = "Opening... Resume";
             break;
           case "gh":
