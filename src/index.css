@@ -4,10 +4,7 @@
 
 
 @font-face {
-  font-family: 'Roboto Mono';
-  src: url('/RobotoMono-Regular.ttf') format('truetype')
+  font-family: 'Geist Mono';
+  src: url('/GeistMono-Regular.ttf') format('truetype')
 }
 
-body{
-  font-family: "dejaVuSansM Nerd Font Mono";
-}

@@ -4,7 +4,7 @@ import Terminal from "./Terminal";
 const App = () => {
   const [dark, setDark] = useState(true);
   return (
-    <div className="bg-[#121313] h-screen w-screen   flex justify-center font-robotoMono">
+    <div className="bg-[#121313] h-screen w-screen   flex justify-center font-geistMono">
       <Terminal dark={dark} setDark={setDark} />
     </div>
   );

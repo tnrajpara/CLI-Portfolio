@@ -6,6 +6,7 @@ export default {
     extend: {
       fontFamily: {
         robotoMono: ["Roboto Mono"],
+        geistMono: ["Geist Mono"],
       },
     },
   },
